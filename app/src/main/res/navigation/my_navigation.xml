@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/my_navigation"
+    app:startDestination="@id/splashFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.example.timetable.Fragments.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment_to_housePageFragment"
+            app:destination="@id/housePageFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_sportPageFragment"
+            app:destination="@id/sportPageFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_studyPageFragment"
+            app:destination="@id/studyPageFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_otherPagerFragment"
+            app:destination="@id/otherPagerFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_addTimeTable"
+            app:destination="@id/addTimeTable" />
+    </fragment>
+    <fragment
+        android:id="@+id/housePageFragment"
+        android:name="com.example.timetable.PagerFragments.HousePageFragment"
+        android:label="fragment_house_page"
+        tools:layout="@layout/fragment_house_page" >
+        <action
+            android:id="@+id/action_housePageFragment_to_insidePageFragment"
+            app:destination="@id/insidePageFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/sportPageFragment"
+        android:name="com.example.timetable.PagerFragments.SportPageFragment"
+        android:label="fragment_sport_page"
+        tools:layout="@layout/fragment_sport_page" >
+        <action
+            android:id="@+id/action_sportPageFragment_to_insidePageFragment"
+            app:destination="@id/insidePageFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/studyPageFragment"
+        android:name="com.example.timetable.PagerFragments.StudyPageFragment"
+        android:label="fragment_study_page"
+        tools:layout="@layout/fragment_study_page" >
+        <action
+            android:id="@+id/action_studyPageFragment_to_insidePageFragment"
+            app:destination="@id/insidePageFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/otherPagerFragment"
+        android:name="com.example.timetable.PagerFragments.OtherPagerFragment"
+        android:label="fragment_other_pager"
+        tools:layout="@layout/fragment_other_pager" >
+        <action
+            android:id="@+id/action_otherPagerFragment_to_insidePageFragment"
+            app:destination="@id/insidePageFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/splashFragment"
+        android:name="com.example.timetable.Fragments.SplashFragment"
+        android:label="fragment_splash"
+        tools:layout="@layout/fragment_splash" >
+        <action
+            android:id="@+id/action_splashFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/addTimeTable"
+        android:name="com.example.timetable.Fragments.AddTimeTable"
+        android:label="fragment_add_time_table"
+        tools:layout="@layout/fragment_add_time_table" />
+    <fragment
+        android:id="@+id/insidePageFragment"
+        android:name="com.example.timetable.Fragments.InsidePageFragment"
+        android:label="fragment_inside_page"
+        tools:layout="@layout/fragment_inside_page" >
+        <action
+            android:id="@+id/action_insidePageFragment_to_addTimeWorkFragment"
+            app:destination="@id/addTimeWorkFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/addTimeWorkFragment"
+        android:name="com.example.timetable.Fragments.AddTimeWorkFragment"
+        android:label="fragment_add_time_work"
+        tools:layout="@layout/fragment_add_time_work" />
+</navigation>

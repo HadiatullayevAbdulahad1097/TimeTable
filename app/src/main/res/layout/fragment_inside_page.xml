@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="Fragments.InsidePageFragment">
+
+    <ImageView
+        android:id="@+id/image"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/image23"
+        android:scaleType="centerCrop"
+        tools:ignore="ContentDescription" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        tools:listitem="@layout/item_inside"
+        app:layout_constraintTop_toBottomOf="@id/neumorphicCardView"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+
+    <com.simformsolutions.ssneumorphic.component.SSNeumorphicButton
+        android:id="@+id/neumorphicCardView"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_58sdp"
+        android:shadowRadius="@integer/material_motion_duration_short_1"
+        app:layout_constraintBottom_toTopOf="@id/rv"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:text="TimeTable"
+        android:fontFamily="@font/appletext"
+        android:textSize="@dimen/_18sdp"
+        android:padding="@dimen/_17sdp"
+        android:gravity="center|left"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:ss_neumorphic_backgroundColor="#FFFFFF"
+        app:ss_neumorphic_shadowElevation="@dimen/_5sdp"
+        app:ss_neumorphic_shadowColorDark="#40C4FF"
+        app:ss_neumorphic_shadowColorLight="#BED1F1"
+        app:ss_neumorphic_shapeAppearance="@style/ShapeAppearance.MyShape"
+        tools:ignore="HardcodedText,RtlHardcoded" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/floating"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#40C4FF"
+        android:src="@drawable/ic_plus"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.901"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.948"
+        tools:ignore="ContentDescription" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
